@@ -17,6 +17,8 @@ def get_tasks(session):
     for symbol in symbols:
         print(symbol)
         tasks.append(session.get(url.format(symbol, api_key), ssl = False))
+
+    print(tasks)
     
     return tasks
 
@@ -30,6 +32,3 @@ async def get_symbols():
 
 
 asyncio.run(get_symbols())
-
-
-print(results)
